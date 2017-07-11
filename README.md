@@ -1,4 +1,6 @@
 This project basic on alibaba group's multigants StarCraft example.
+The key file is the random agent.py,single battle evn.py and DQN.
+I changed the three files to embedding dqn,
 # gym-starcraft
 Gym StarCraft is an environment bundle for OpenAI Gym. It is based on [Facebook's TorchCraft](https://github.com/TorchCraft/TorchCraft), which is a bridge between Torch and StarCraft for AI research.
 
