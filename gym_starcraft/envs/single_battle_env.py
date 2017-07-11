@@ -19,6 +19,7 @@ class SingleBattleEnv(sc.StarCraftEnv):
         # attack or move, move_degree, move_distance
         action_low = [-1.0, -1.0, -1.0]
         action_high = [1.0, 1.0, 1.0]
+        print("singlebattel")
         return spaces.Box(np.array(action_low), np.array(action_high))
 
     def _observation_space(self):
@@ -30,7 +31,7 @@ class SingleBattleEnv(sc.StarCraftEnv):
 
     def _make_commands(self, action):
         cmds = []
-        if self.state is None or not action:
+        if self.state is None or not action.any():
             return cmds
 
         myself_id = None
