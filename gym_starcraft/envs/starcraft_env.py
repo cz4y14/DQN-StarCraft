@@ -21,6 +21,7 @@ class StarCraftEnv(gym.Env):
         self.episode_steps = 0
 
         self.action_space = self._action_space()
+        print("StarCraftEnv")
         self.observation_space = self._observation_space()
 
         self.state = None
@@ -31,6 +32,7 @@ class StarCraftEnv(gym.Env):
         self.client.close()
 
     def _step(self, action):
+        print "4"
         self.episode_steps += 1
 
         self.client.send(self._make_commands(action))
@@ -45,6 +47,7 @@ class StarCraftEnv(gym.Env):
         return self.obs, reward, done, info
 
     def _reset(self):
+        print "3"
         utils.print_progress(self.episodes, self.episode_wins)
 
         if not self.self_play and self.episode_steps == self.max_episode_steps:
