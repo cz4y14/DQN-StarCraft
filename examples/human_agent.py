@@ -30,3 +30,4 @@ if __name__ == '__main__':
         episodes += 1
 
     env.close()
+    
